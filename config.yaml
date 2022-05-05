@@ -1,0 +1,18 @@
+blocks: [
+
+
+  # Commands in each block are run in parallel on each host.
+  {
+    # Nodes the commands in this block will be executed on:
+    description: "A test block",
+
+    hosts: ["10.10.1.2", "10.10.1.3", "10.10.1.4"],
+
+    commands: [
+      "mkdir /test",
+      "touch /test/testfile",
+      "ls /test",
+      "rm -r /test"
+    ]
+  }
+]
